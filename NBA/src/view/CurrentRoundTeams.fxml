@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>  
+
+<VBox styleClass="background"  alignment="CENTER" prefHeight="320" prefWidth="380" spacing="20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CurrentRoundTeamsController">
+    <padding>
+        <Insets top="20" right="50" bottom="20" left="50"/>
+    </padding>
+
+    <Label text="" fx:id="roundLbl" styleClass="label-h2"/>
+
+    <TableView fx:id="gamesTv">
+    
+        <columns>
+            <TableColumn text="Team 1" fx:id="team1" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="team1"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn fx:id="vs" text="" prefWidth="50">
+                <cellValueFactory>
+                    <PropertyValueFactory property="vs"/>
+                </cellValueFactory>
+
+            </TableColumn>
+            <TableColumn text="Team 2" fx:id="team2" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="team2"/>
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+    </TableView>
+
+    <Button text="Close" onAction="#close"/>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

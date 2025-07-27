@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox  alignment="CENTER" styleClass="background" prefHeight="450.0" prefWidth="350.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SeasonController">
+<ImageView preserveRatio="true" fitWidth="350">
+    <image>
+        <Image url="view/NBA_Back.jpg"/>
+    </image>
+</ImageView>
+
+<VBox spacing="20" alignment="CENTER">
+    <Button prefWidth="200" fx:id="roundBtn" text="Round" onAction="#handleRound"/>
+    <Button prefWidth="200" fx:id="currentBtn" text="Current" onAction="#handleCurrent"/>
+    <Button prefWidth="200" fx:id="gameBtn" text="Game" onAction="#handleGame"/>
+    <Button prefWidth="200" fx:id="resultBtn" text="Result" onAction="#handleResult"/>
+    <Button prefWidth="200" text="Close" onAction="#close"/>
+</VBox>
+
+
+        
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+    
+</VBox>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="background" prefHeight="420.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AssociationController">
+    <ImageView preserveRatio="true" fitWidth="600">
+        <image>
+            <Image url="view/NBA_Back.jpg"/>
+        </image>
+    </ImageView>
+
+<HBox styleClass="hbox" spacing="10">
+    <Button prefWidth="200" fx:id="exploreBtn" text="Explore the teams" onAction="#handleExplore"/>
+    <Region fx:id="spacer" HBox.hgrow="ALWAYS"/>
+    <Button prefWidth="200" fx:id="arrangeBtn" text="Arrange a new season" onAction="#handleArrange"/>
+</HBox>
+
+<HBox styleClass="hbox" alignment="CENTER">
+    <Button prefWidth="200" text="Close" onAction="#close"/>
+</HBox>
+
+
+
+
+
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

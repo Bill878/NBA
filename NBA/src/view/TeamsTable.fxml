@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>  
+
+<VBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1"  prefWidth="770" styleClass="background" fx:controller="controller.TeamsController">
+    <Label text="All Teams" styleClass="heading"/>
+
+<TableView fx:id="teamsTv">
+    <columns>
+
+        <TableColumn text="Team Name" prefWidth="200">
+            <cellValueFactory>
+                <PropertyValueFactory property="name"/>
+            </cellValueFactory>
+        </TableColumn>
+
+        <TableColumn text="Number of Players" prefWidth="200">
+            <cellValueFactory>
+                <PropertyValueFactory property="countPlayer"/>
+            </cellValueFactory>
+        </TableColumn>
+
+        <TableColumn fx:id="avgCreditColumn" text="Average Player Credit" prefWidth="200">
+            <cellValueFactory>
+                <PropertyValueFactory property="countAvgCredit"/>
+            </cellValueFactory>
+
+        </TableColumn>
+                <TableColumn fx:id="avgAgeColumn" text="Average Age" prefWidth="200">
+            <cellValueFactory>
+                <PropertyValueFactory property="countAvgAge"/>
+            </cellValueFactory>
+        </TableColumn>
+
+    </columns>
+</TableView>
+
+    <HBox styleClass="hbox" spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+        <Button prefWidth="200" fx:id="addBtn" text="Add" onAction="#handleAdd"/>
+        <Button prefWidth="200" fx:id="manageBtn" text="Manage" disable="true" onAction="#handleManage"/>
+        <Button prefWidth="200" fx:id="deleteBtn" text="Delete" disable="true" onAction="#handleDelete"/>
+        <Button prefWidth="200" text="Close" onAction="#close"/>
+    </HBox>
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+    
+</VBox>
