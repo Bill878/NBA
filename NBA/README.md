@@ -29,7 +29,7 @@
 
 
 # How to Run
-1. Run the "NBA" executable JAR file.
+1. Download the raw "NBA" JAR file.
 
 # Author
 - Bill Ren
